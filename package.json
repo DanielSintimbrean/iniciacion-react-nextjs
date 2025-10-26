@@ -1,0 +1,26 @@
+{
+  "name": "iniciacia-react-netxjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "16.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.16",
+    "@types/node": "20.19.23",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "prettier": "3.6.2",
+    "prettier-plugin-tailwindcss": "0.7.1",
+    "tailwindcss": "4.1.16",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "npm@11.6.1"
+}
