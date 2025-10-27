@@ -20,5 +20,5 @@ body {
 
 
 button {
-  @apply py-2 px-4 rounded-lg hover:cursor-pointer ring ring-slate-700;
+  @apply py-2 px-4 rounded-lg hover:cursor-pointer ring ring-slate-700 disabled:cursor-not-allowed disabled:opacity-60;
 }
