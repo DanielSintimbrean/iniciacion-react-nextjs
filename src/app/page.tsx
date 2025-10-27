@@ -1,3 +1,4 @@
+import { Counter } from "../components/counter";
 import { Button } from "../components/button";
 
 export default function Home() {
@@ -7,9 +8,10 @@ export default function Home() {
         {/**
          * - Utiliza el componente con diferentes textos y variants
          */}
-        <Button>Mi primer botón</Button>
+        {/* <Button>Mi primer botón</Button>
         <Button variant="red">Mi segundo botón</Button>
-        <Button variant="gray">Mi tercer botón</Button>
+        <Button variant="gray">Mi tercer botón</Button> */}
+        <Counter />
       </main>
     </div>
   );

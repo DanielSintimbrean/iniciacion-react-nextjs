@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 /**
  * Utilizar useState para crear un contador
  *
@@ -10,16 +13,25 @@
  */
 
 export function Counter() {
-  // TODO: Crear el estado usando useState
+  const [counter, setCounter] = useState(0);
+
+  function increment() {
+    setCounter((c) => c + 1);
+  }
+
+  function reset() {
+    setCounter(0);
+  }
 
   return (
     <div className="flex flex-col items-center justify-center gap-2">
-      {/* TODO: Mostrar el valor del contador */}
+      <span>Contatador: {counter}</span>
 
-      {/* TODO: Botón para incrementar el contador */}
+      <button onClick={increment}>Incrementar</button>
 
-      {/* TODO: Botón para resetear el contador */}
+      <button disabled={counter == 0} onClick={reset}>
+        Resetear
+      </button>
     </div>
   );
 }
-
