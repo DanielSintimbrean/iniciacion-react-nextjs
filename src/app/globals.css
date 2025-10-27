@@ -17,3 +17,8 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+button {
+  @apply py-2 px-4 rounded-lg hover:cursor-pointer ring ring-slate-700;
+}
