@@ -1,10 +1,6 @@
 /**
  * Para que podamos utilizar un componente desde otro archivo, debemos exportarlo
  * utilizando la palabra reservada `export`.
- *
- * Ejercicio:
- *   Copiar el componente Button que hemos creado en el archivo `page.tsx` y
- *   exportarlo para que podamos utilizarlo desde otro archivo.
  */
 
 /**
@@ -15,7 +11,8 @@
  *   2. Devolver un elemento (tag HTML o un componente)
  *
  * Ejercicio:
- *   Crear un componente Button que devuelva un botón con el texto "Mi primer botón"
+ *   - Modificar el componente Button para aceptar un parámetro text
+ *   - Añade el parametro opcional variant
  */
 export function Button() {
   return <button>Mi primer botón</button>;
