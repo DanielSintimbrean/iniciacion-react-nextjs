@@ -14,6 +14,22 @@
  *   - Modificar el componente Button para aceptar un parámetro text
  *   - Añade el parametro opcional variant
  */
-export function Button() {
-  return <button>Mi primer botón</button>;
+export function Button({
+  children,
+  variant,
+}: {
+  children: React.ReactNode;
+  variant?: "red" | "gray";
+}) {
+  let className;
+
+  if (variant == "red") {
+    className = "bg-red-300";
+  }
+
+  if (variant == "gray") {
+    className = "bg-slate-300";
+  }
+
+  return <button className={className}>{children}</button>;
 }

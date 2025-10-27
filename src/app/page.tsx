@@ -7,7 +7,9 @@ export default function Home() {
         {/**
          * - Utiliza el componente con diferentes textos y variants
          */}
-        <Button />
+        <Button>Mi primer botón</Button>
+        <Button variant="red">Mi segundo botón</Button>
+        <Button variant="gray">Mi tercer botón</Button>
       </main>
     </div>
   );
