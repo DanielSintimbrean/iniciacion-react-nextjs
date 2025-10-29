@@ -15,6 +15,14 @@ export default async function PokemonDetail({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  const { id } = await params;
+
+  const pokemon = await getPokemon(id);
+
+  if (!pokemon) {
+    notFound();
+  }
+
   return (
     <div className="flex min-h-screen justify-center bg-zinc-50 font-sans">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-center bg-white">
@@ -22,9 +30,9 @@ export default async function PokemonDetail({
           <Link href="/04-pokemon">Volver</Link>
         </div>
         <h1 className="mb-8 text-center text-4xl font-bold text-gray-800">
-          No implementado
+          {pokemon.name}
         </h1>
-        <img className="size-64" />
+        <img className="size-64" src={pokemon.sprites.front_default} />
       </main>
     </div>
   );

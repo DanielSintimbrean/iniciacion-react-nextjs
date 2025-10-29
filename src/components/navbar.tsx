@@ -23,8 +23,11 @@ export function Navbar() {
           </div>
 
           <ul className="flex gap-x-4 font-mono text-sm text-white">
-            {/* TODO: Mapea el array 'links' para crear cada enlace */}
-            {/* Usa .map() y el componente Link importado */}
+            {links.map((link) => (
+              <Link key={link.href} href={link.href}>
+                {link.label}
+              </Link>
+            ))}
           </ul>
         </div>
       </div>
