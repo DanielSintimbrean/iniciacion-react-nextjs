@@ -1,4 +1,4 @@
-import { Counter } from "../components/counter";
+import { Counter } from "../components/persistent-counter";
 import { Button } from "../components/button";
 
 export default function Home() {

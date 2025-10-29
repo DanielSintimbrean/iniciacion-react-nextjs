@@ -21,11 +21,21 @@ export function Counter() {
 
   // useEffect para leer el valor inicial desde localStorage
   // Se ejecuta SOLO UNA VEZ después del primer render
-  useEffect(() => {});
+  useEffect(() => {
+    const valor = localStorage.getItem(clave);
+
+    const number = Number(valor);
+
+    if (!isNaN(number)) {
+      setCounter(number);
+    }
+  }, []);
 
   // useEffect para guardar el valor en localStorage cada vez que counter cambia
   // Se ejecuta CADA VEZ que counter cambia (counter está en las dependencias)
-  useEffect(() => {});
+  useEffect(() => {
+    localStorage.setItem(clave, String(counter));
+  }, [counter]);
 
   function increment() {
     setCounter((c) => c + 1);
