@@ -9,6 +9,7 @@ const links = [
   { href: "/02-use-state", label: "useState" },
   { href: "/03-use-effect", label: "useEffect" },
   { href: "/04-pokemon", label: "Pokemon" },
+  { href: "/05-server-client", label: "Server/Client" },
 ];
 
 export function Navbar() {
