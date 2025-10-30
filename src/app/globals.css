@@ -22,3 +22,14 @@ body {
 button {
   @apply py-2 px-4 rounded-lg hover:cursor-pointer ring ring-slate-700 disabled:cursor-not-allowed disabled:opacity-60;
 }
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
