@@ -1,3 +1,5 @@
+"use server";
+
 export async function contact({
   name,
   email,
