@@ -10,6 +10,7 @@ const links = [
   { href: "/03-use-effect", label: "useEffect" },
   { href: "/04-pokemon", label: "Pokemon" },
   { href: "/05-server-client", label: "Server/Client" },
+  { href: "/06-server-action", label: "Server Action" },
 ];
 
 export function Navbar() {
@@ -23,7 +24,7 @@ export function Navbar() {
             <h1 className="text-xl font-bold text-white">React + Next.js</h1>
           </div>
 
-          <ul className="flex gap-x-4 font-mono text-sm text-white">
+          <ul className="scrollbar-hide flex gap-x-4 overflow-x-auto px-4 font-mono text-sm text-white">
             {links.map((link) => (
               <Link key={link.href} href={link.href}>
                 {link.label}
