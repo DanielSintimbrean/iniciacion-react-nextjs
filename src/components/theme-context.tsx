@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 export type Theme = "light" | "dark";
 
@@ -15,7 +15,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   // - Crear un useState<Theme>("light")
   // - Implementar toggleTheme que alterne entre "light" y "dark"
   // - Pasar { theme, toggleTheme } al value del Provider
-  return <>{children}</>;
+
+  const [theme, setTheme] = useState<Theme>("light");
+
+  function toggleTheme() {
+    setTheme((t) => (t === "light" ? "dark" : "light"));
+  }
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }
 
 export function useTheme() {
